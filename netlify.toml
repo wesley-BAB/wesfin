@@ -1,0 +1,24 @@
+# Netlify: site web (build do app Expo) + API Express como função, no mesmo domínio.
+# Variáveis obrigatórias em Site configuration > Environment variables:
+#   SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, GOOGLE_CLIENT_ID (e opcionais do .env.example)
+
+[build]
+  command = "npm ci --prefix app && npm run build"
+  publish = "app/dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# API -> função (status 200 = reescrita, a URL continua /api/...)
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+# Rotas do app (Expo Router, página única) -> index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
