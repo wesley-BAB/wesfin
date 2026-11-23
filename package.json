@@ -1,0 +1,24 @@
+{
+  "name": "wesfin",
+  "version": "1.0.0",
+  "description": "WESFIN - controle financeiro simples com login Google e Supabase",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "app": "npm --prefix app run web",
+    "build": "npm --prefix app run build:web",
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "google-auth-library": "^9.14.2"
+  }
+}

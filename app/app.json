@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "WESFIN",
+    "slug": "wesfin",
+    "scheme": "wesfin",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wesfin.app"
+    },
+    "android": {
+      "package": "com.wesfin.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0f1f15",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png",
+      "name": "WESFIN",
+      "themeColor": "#2e9d4f"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "O WESFIN usa o microfone para você falar seus lançamentos com a WESIA.",
+          "speechRecognitionPermission": "O WESFIN transforma sua fala em texto para registrar lançamentos com a WESIA."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

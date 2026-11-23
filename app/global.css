@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cores que mudam com o tema (claro / escuro), em "R G B" para aceitar opacidade.
+   Os mesmos valores em hexadecimal ficam em src/lib/tema.js (ícones e componentes nativos). */
+:root {
+  --fundo: 246 246 243;
+  --cartao: 255 255 255;
+  --borda: 231 230 225;
+  --tinta: 11 11 11;
+  --tinta-2: 82 81 78;
+  --tinta-mudo: 137 135 129;
+  --marca-claro: 233 246 236;
+  --marca-texto: 31 125 59;
+  --entrada-texto: 0 99 0;
+  --entrada-fundo: 232 247 240;
+  --saida-texto: 180 35 35;
+  --saida-fundo: 253 236 236;
+  --pendente-texto: 138 90 0;
+  --pendente-fundo: 253 243 220;
+  --investimento-texto: 28 90 166;
+  --investimento-fundo: 232 241 251;
+  --zap-bolha: 220 243 212;
+  --zap-fundo: 238 243 234;
+}
+
+.dark:root {
+  --fundo: 13 17 15;
+  --cartao: 24 29 26;
+  --borda: 44 51 47;
+  --tinta: 236 240 237;
+  --tinta-2: 178 186 181;
+  --tinta-mudo: 130 140 134;
+  --marca-claro: 26 54 35;
+  --marca-texto: 120 206 120;
+  --entrada-texto: 92 214 160;
+  --entrada-fundo: 18 50 38;
+  --saida-texto: 255 140 137;
+  --saida-fundo: 62 25 25;
+  --pendente-texto: 240 190 90;
+  --pendente-fundo: 58 44 12;
+  --investimento-texto: 128 176 242;
+  --investimento-fundo: 21 40 66;
+  --zap-bolha: 27 66 39;
+  --zap-fundo: 16 21 18;
+}
